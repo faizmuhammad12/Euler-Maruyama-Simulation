@@ -35,16 +35,16 @@ def run_simulation():
 	ys = np.zeros(TS.size);
 	ys[0] = Y_INIT;
 	for i in range(1, TS.size):
-			t = T_INIT + (i - 1) * DT;
-			y = ys[i - 1];
-			ys[i] = y + mu(y, t) * DT + sigma(y, t) * dW(DT);
+		t = T_INIT + (i - 1) * DT;
+		y = ys[i - 1];
+		ys[i] = y + mu(y, t) * DT + sigma(y, t) * dW(DT);
 
 	return TS, ys;
 
 def plot_simulations(num_sims: int):
 	"""plotting several simulations in one graph"""
 	for _ in range(num_sims):
-			plt.plot(*run_simulation());
+		plt.plot(*run_simulation());
 
 	plt.xlabel("time");
 	plt.ylabel("y");
