@@ -46,8 +46,8 @@ def plot_simulations(num_sims: int):
 	for _ in range(num_sims):
 		plt.plot(*run_simulation());
 
-	plt.xlabel("time");
-	plt.ylabel("y");
+	plt.xlabel("t");
+	plt.ylabel("I(t)");
 	plt.show();
 
 if __name__ == "__main__":
